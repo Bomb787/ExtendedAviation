@@ -1,0 +1,36 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="LGPL-3.0-or-later"
+issueTrackerURL="https://github.com/Bomb787/ExtendedAviation/issues"
+[[mods]]
+modId="extended_aviation"
+version="${file.jarVersion}"
+displayName="Extended Aviation"
+# A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
+#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+displayURL="https://github.com/Bomb787/ExtendedAviation"
+logoFile="icon.png"
+credits="Addon by Bomb787. Thanks to Conczin for the wonderful Immersive Aircraft mod!"
+authors="Bomb787"
+displayTest="MATCH_VERSION"
+description='''
+An addon mod for Immersive Aircraft for a (much) larger variety of aircraft.
+'''
+[[dependencies.extended_aviation]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.extended_aviation]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.extended_aviation]]
+    modId="extended_aviation"
+    mandatory=true
+    versionRange="[0.6.2,)"
+    ordering="NONE"
+    side="BOTH"

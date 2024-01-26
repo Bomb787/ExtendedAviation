@@ -1,0 +1,145 @@
+plugins {
+    id 'eclipse'
+    id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
+}
+
+version = '1.0'
+group = 'io.github.bomb787.extended_aviation'
+archivesBaseName = 'Extended Aviation'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
+
+minecraft {
+    mappings channel: 'parchment', version: '2022.11.27-1.19.2'
+
+    // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
+    runs {
+        client {
+            workingDirectory project.file('run')
+			
+            property 'forge.logging.markers', 'REGISTRIES'
+			
+            property 'forge.logging.console.level', 'debug'
+			
+            property 'forge.enabledGameTestNamespaces', 'extended_aviation'
+
+            mods {
+                extended_aviation {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        server {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'extended_aviation'
+
+            mods {
+                extended_aviation {
+                    source sourceSets.main
+                }
+            }
+        }
+		
+        gameTestServer {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+
+            property 'forge.enabledGameTestNamespaces', 'extended_aviation'
+
+            mods {
+                extended_aviation {
+                    source sourceSets.main
+                }
+            }
+        }
+
+        data {
+            workingDirectory project.file('run')
+
+            property 'forge.logging.markers', 'REGISTRIES'
+
+            property 'forge.logging.console.level', 'debug'
+			
+            args '--mod', 'extended_aviation', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+
+            mods {
+                extended_aviation {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+	exclusiveContent {
+		forRepository {
+			maven {
+				name = "Modrinth"
+				url = "https://api.modrinth.com/maven"
+			}
+		}
+		forRepositories(fg.repository)
+		filter {
+			includeGroup "maven.modrinth"
+		}
+	}
+}
+
+dependencies {
+    minecraft 'net.minecraftforge:forge:1.19.2-43.3.0'
+	
+	runtimeOnly fg.deobf("maven.modrinth:immersive-aircraft:5LJqHC62")
+    runtimeOnly fg.deobf("maven.modrinth:no-telemetry:1.8.0")
+    runtimeOnly fg.deobf("maven.modrinth:jei:6ImKQVtc")
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+}
+
+jar {
+    manifest {
+        attributes([
+                "Specification-Title"     : "extended_aviation",
+                "Specification-Vendor"    : "Bomb787",
+                "Specification-Version"   : "1",
+                "Implementation-Title"    : project.name,
+                "Implementation-Version"  : project.jar.archiveVersion,
+                "Implementation-Vendor"   : "Bomb787",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+}
+
+jar.finalizedBy('reobfJar')
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact jar
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/mcmodsrepo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

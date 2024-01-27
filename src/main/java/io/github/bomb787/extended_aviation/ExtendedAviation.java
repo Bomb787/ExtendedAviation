@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
+import io.github.bomb787.extended_aviation.client.render.entity.renderer.TestHelicopterEntityRenderer;
 import io.github.bomb787.extended_aviation.client.render.entity.renderer.TestPlaneEntityRenderer;
 import io.github.bomb787.extended_aviation.init.EntityInit;
 import io.github.bomb787.extended_aviation.init.ItemInit;
@@ -58,6 +59,7 @@ public class ExtendedAviation {
         @SubscribeEvent
         public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         	event.registerEntityRenderer(EntityInit.TEST.get(), TestPlaneEntityRenderer::new);
+        	event.registerEntityRenderer(EntityInit.TEST_HELI.get(), TestHelicopterEntityRenderer::new);
         }
     }
 }

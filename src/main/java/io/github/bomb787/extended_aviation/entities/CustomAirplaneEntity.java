@@ -2,14 +2,11 @@ package io.github.bomb787.extended_aviation.entities;
 
 import immersive_aircraft.entity.AircraftEntity;
 import immersive_aircraft.entity.EngineAircraft;
-import immersive_aircraft.entity.misc.AircraftProperties;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
 public abstract class CustomAirplaneEntity extends EngineAircraft {
-	
-	protected AircraftProperties properties;
 
 	public CustomAirplaneEntity(EntityType<? extends AircraftEntity> entityType, Level world) {
 		super(entityType, world, true);

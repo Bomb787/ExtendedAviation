@@ -1,0 +1,10 @@
+{
+	//Descriptions
+	"item.extended_aviation.reliant_robin.description": "You can almost hear \"HAMMOONNNND\" being yelled as you climb in.",
+	
+	//Entities
+	"entity.extended_aviation.reliant_robin": "Reliant Robin",
+	
+	//Items
+	"item.extended_aviation.reliant_robin": "Reliant Robin"
+}

@@ -84,7 +84,9 @@ public class ReliantRobinEntity extends Rotorcraft {
                     new Vec3(-0.6f, 0.5f, -0.75f)
             ),
             List.of(
-                    new Vec3(0.6f, 0.5f, -0.75f)
+                    new Vec3(0.6f, 0.5f, -0.75f),
+                    new Vec3(0.-6f, 0.5f, -2f),
+                    new Vec3(0.6f, 0.5f, -2f)
             )
     );
 

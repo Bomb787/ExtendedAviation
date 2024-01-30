@@ -23,42 +23,38 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(ExtendedAviation.MOD_ID)
 public class ExtendedAviation {
-    
-    public static final String MOD_ID = "extended_aviation";
-    
-    public static final Logger LOGGER = LogUtils.getLogger();
-
-    public ExtendedAviation() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        bus.addListener(this::commonSetup);
-        
-        EntityInit.ENTITIES.register(bus);
-        ItemInit.ITEMS.register(bus);
-        SoundInit.SOUNDS.register(bus);
-        
-        MinecraftForge.EVENT_BUS.register(this);
-    }
-
-    private void commonSetup(final FMLCommonSetupEvent event) {
-    	
-    }
-    
+	
+	public static final String MOD_ID = "extended_aviation";
+	
+	public static final Logger LOGGER = LogUtils.getLogger();
+	
+	public ExtendedAviation() {
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		bus.addListener(this::commonSetup);
+		
+		EntityInit.ENTITIES.register(bus);
+		ItemInit.ITEMS.register(bus);
+		SoundInit.SOUNDS.register(bus);
+		
+		MinecraftForge.EVENT_BUS.register(this);
+	}
+	
+	private void commonSetup(final FMLCommonSetupEvent event) {}
+	
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-    	
-    }
-    
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-        }
-        
-        @SubscribeEvent
-        public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        	event.registerEntityRenderer(EntityInit.TEST.get(), TestPlaneEntityRenderer::new);
-        	event.registerEntityRenderer(EntityInit.TEST_HELI.get(), TestHelicopterEntityRenderer::new);
-        	event.registerEntityRenderer(EntityInit.RELIANT_ROBIN.get(), ReliantRobinEntityRenderer::new);
-        }
-    }
+    public void onServerStarting(ServerStartingEvent event) {}
+
+	@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+	public static class ClientModEvents {
+		@SubscribeEvent
+		public static void onClientSetup(FMLClientSetupEvent event) {}
+		
+		@SubscribeEvent
+		public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+			event.registerEntityRenderer(EntityInit.TEST.get(), TestPlaneEntityRenderer::new);
+			event.registerEntityRenderer(EntityInit.TEST_HELI.get(), TestHelicopterEntityRenderer::new);
+			event.registerEntityRenderer(EntityInit.RELIANT_ROBIN.get(), ReliantRobinEntityRenderer::new);
+		}
+	}
+	
 }

@@ -18,39 +18,39 @@ public class ReliantRobinEntityRenderer<T extends ReliantRobinEntity> extends Ai
 	private final ResourceLocation texture;
 	
 	private final Model model = new Model()
-            .add(
-                    new Object(id, "frame")
-            )
-            .add(
-                    new Object(id, "front_wheel").setAnimationConsumer(
-                            (entity, yaw, tickDelta, matrixStack) -> {
-                                matrixStack.translate(0, 0, 1f);
-                                matrixStack.mulPose(Vector3f.YP.rotationDegrees(entity.pressingInterpolatedX.getSmooth(tickDelta) * 35.0f));
-                            }
-                    )
-            )
-            .add(
-                    new Object(id, "steering_wheel").setAnimationConsumer(
-                            (entity, yaw, tickDelta, matrixStack) -> {
-                                matrixStack.translate(-0.6f, 1.25f, 0f);
-                                matrixStack.mulPose(Vector3f.XP.rotationDegrees(10f));
-                                matrixStack.mulPose(Vector3f.ZP.rotationDegrees(-entity.pressingInterpolatedX.getSmooth(tickDelta) * 30.0f));
-                            }
-                    )
-            )
-            .add(
-                    new Object(id, "rotor").setAnimationConsumer(
-                            (entity, yaw, tickDelta, matrixStack) -> {
-                            	matrixStack.translate(0, 0, -0.75f);
-                                matrixStack.mulPose(Vector3f.YP.rotationDegrees(-entity.engineRotation.getSmooth(tickDelta) * 100f));
-                            }
-                    )
-            );
-
+			.add(
+					new Object(id, "frame")
+			)
+			.add(
+					new Object(id, "front_wheel").setAnimationConsumer(
+							(entity, yaw, tickDelta, matrixStack) -> {
+								matrixStack.translate(0, 0, 1f);
+								matrixStack.mulPose(Vector3f.YP.rotationDegrees(entity.pressingInterpolatedX.getSmooth(tickDelta) * 35.0f));
+							}
+					)
+			)
+			.add(
+					new Object(id, "steering_wheel").setAnimationConsumer(
+							(entity, yaw, tickDelta, matrixStack) -> {
+								matrixStack.translate(-0.6f, 1.25f, 0f);
+								matrixStack.mulPose(Vector3f.XP.rotationDegrees(10f));
+								matrixStack.mulPose(Vector3f.ZP.rotationDegrees(-entity.pressingInterpolatedX.getSmooth(tickDelta) * 30.0f));
+							}
+					)
+			)
+			.add(
+					new Object(id, "rotor").setAnimationConsumer(
+							(entity, yaw, tickDelta, matrixStack) -> {
+								matrixStack.translate(0, 0, -0.75f);
+								matrixStack.mulPose(Vector3f.YP.rotationDegrees(-entity.engineRotation.getSmooth(tickDelta) * 100f));
+							}
+					)
+			);
+	
 	public ReliantRobinEntityRenderer(Context context) {
 		super(context);
 		this.shadowRadius = 1f;
-        texture = new ResourceLocation(ExtendedAviation.MOD_ID, "textures/entity/reliant_robin.png");
+		texture = new ResourceLocation(ExtendedAviation.MOD_ID, "textures/entity/reliant_robin.png");
 	}
 	
 	@Override
@@ -67,5 +67,5 @@ public class ReliantRobinEntityRenderer<T extends ReliantRobinEntity> extends Ai
 	protected Vector3f getPivot(AircraftEntity entity) {
 		return Vector3f.ZERO;
 	}
-	
+
 }

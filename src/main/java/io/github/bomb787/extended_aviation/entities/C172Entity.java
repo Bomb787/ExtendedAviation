@@ -9,29 +9,29 @@ import net.minecraft.world.level.Level;
 public class C172Entity extends CustomAirplaneEntity {
 	
 	protected final AircraftProperties properties = new AircraftProperties(this)
-            .setYawSpeed(5.0f)
-            .setPitchSpeed(4.0f)
-            .setEngineSpeed(0.05f)
-            .setGlideFactor(0.05f)
-            .setDriftDrag(0.01f)
-            .setLift(0.15f)
-            .setRollFactor(45.0f)
-            .setGroundPitch(4.0f)
-            .setWindSensitivity(0.025f)
-            .setMass(1.0f);
+			.setYawSpeed(5.0f)
+			.setPitchSpeed(4.0f)
+			.setEngineSpeed(0.05f)
+			.setGlideFactor(0.05f)
+			.setDriftDrag(0.01f)
+			.setLift(0.15f)
+			.setRollFactor(45.0f)
+			.setGroundPitch(4.0f)
+			.setWindSensitivity(0.025f)
+			.setMass(1.0f);
 	
 	private static final VehicleInventoryDescription inventoryDescription = new VehicleInventoryDescription()
 			.addSlot(VehicleInventoryDescription.SlotType.BOILER, 8 + 9, 8 + 22)
-	        .addSlot(VehicleInventoryDescription.SlotType.BOOSTER, 8 + 9, 8 + 48)
-	        .addSlot(VehicleInventoryDescription.SlotType.WEAPON, 8 + 18 * 2 + 6, 8 + 6)
-	        .addSlot(VehicleInventoryDescription.SlotType.BANNER, 8 + 18 * 2 + 28, 8 + 6)
-	        .addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 6, 8 + 6 + 22)
-	        .addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 28, 8 + 6 + 22)
-	        .addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 6, 8 + 6 + 22 * 2)
-	        .addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 28, 8 + 6 + 22 * 2)
-	        .addSlots(VehicleInventoryDescription.SlotType.INVENTORY, 8 + 18 * 5, 8, 4, 4)
-	        .build();
-
+			.addSlot(VehicleInventoryDescription.SlotType.BOOSTER, 8 + 9, 8 + 48)
+			.addSlot(VehicleInventoryDescription.SlotType.WEAPON, 8 + 18 * 2 + 6, 8 + 6)
+			.addSlot(VehicleInventoryDescription.SlotType.BANNER, 8 + 18 * 2 + 28, 8 + 6)
+			.addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 6, 8 + 6 + 22)
+			.addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 28, 8 + 6 + 22)
+			.addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 6, 8 + 6 + 22 * 2)
+			.addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 28, 8 + 6 + 22 * 2)
+			.addSlots(VehicleInventoryDescription.SlotType.INVENTORY, 8 + 18 * 5, 8, 4, 4)
+			.build();
+	
 	public C172Entity(EntityType<? extends AircraftEntity> entityType, Level world) {
 		super(entityType, world);
 	}
@@ -40,7 +40,7 @@ public class C172Entity extends CustomAirplaneEntity {
 	public VehicleInventoryDescription getInventoryDescription() {
 		return inventoryDescription;
 	}
-
+	
 	@Override
 	public AircraftProperties getProperties() {
 		return properties;

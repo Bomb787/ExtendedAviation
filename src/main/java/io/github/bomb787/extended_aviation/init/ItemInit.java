@@ -3,6 +3,7 @@ package io.github.bomb787.extended_aviation.init;
 import immersive_aircraft.ItemGroups;
 import immersive_aircraft.item.AircraftItem;
 import io.github.bomb787.extended_aviation.ExtendedAviation;
+import io.github.bomb787.extended_aviation.entities.C172Entity;
 import io.github.bomb787.extended_aviation.entities.ReliantRobinEntity;
 import io.github.bomb787.extended_aviation.entities.TestHelicopterEntity;
 import io.github.bomb787.extended_aviation.entities.TestPlaneEntity;
@@ -23,5 +24,8 @@ public class ItemInit {
 	
 	public static final RegistryObject<AircraftItem> RELIANT_ROBIN = ITEMS.register("reliant_robin", 
 			() -> new AircraftItem(new Item.Properties().stacksTo(1).tab(ItemGroups.GROUP), world -> new ReliantRobinEntity(EntityInit.RELIANT_ROBIN.get(), world)));
+	
+	public static final RegistryObject<AircraftItem> C172 = ITEMS.register("c172", 
+			() -> new AircraftItem(new Item.Properties().stacksTo(1).tab(ItemGroups.GROUP), world -> new C172Entity(EntityInit.C172.get(), world)));
 
 }

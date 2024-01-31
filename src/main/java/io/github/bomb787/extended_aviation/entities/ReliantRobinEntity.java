@@ -24,7 +24,7 @@ public class ReliantRobinEntity extends Rotorcraft {
 			.setLift(0.1f)
 			.setRollFactor(35.0f)
 			.setWindSensitivity(0.0525f)
-			.setMass(5f);
+			.setMass(2.5f);
 	
 	private static VehicleInventoryDescription inventoryDescription = new VehicleInventoryDescription()
 			.addSlot(VehicleInventoryDescription.SlotType.BOILER, 8 + 9, 8 + 14)

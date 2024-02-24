@@ -8,11 +8,12 @@ import com.mojang.datafixers.util.Pair;
 import com.mojang.math.Vector3f;
 
 import immersive_aircraft.Main;
+import immersive_aircraft.client.render.entity.MeshRenderer;
 import immersive_aircraft.client.render.entity.renderer.AircraftEntityRenderer;
 import immersive_aircraft.entity.AircraftEntity;
 import immersive_aircraft.entity.misc.VehicleInventoryDescription;
+import immersive_aircraft.resources.obj.Mesh;
 import immersive_aircraft.util.Utils;
-import immersive_aircraft.util.obj.Mesh;
 import io.github.bomb787.extended_aviation.entities.TestPlaneEntity;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.core.Holder;
@@ -40,8 +41,8 @@ public class TestPlaneEntityRenderer<T extends TestPlaneEntity> extends Aircraft
 								for (ItemStack slot : slots) {
 									if (!slot.isEmpty() && slot.getItem() instanceof BannerItem) {
 										List<Pair<Holder<BannerPattern>, DyeColor>> patterns = Utils.parseBannerItem(slot);
-										Mesh mesh = getFaces(id, "banner_" + (i++));
-										renderBanner(matrixStack, vertexConsumerProvider, light, mesh, true, patterns);
+										Mesh mesh = MeshRenderer.getFaces(id, "banner_" + (i++));
+										MeshRenderer.renderBanner(matrixStack, vertexConsumerProvider, light, mesh, true, patterns);
 									}
 								}
 							}

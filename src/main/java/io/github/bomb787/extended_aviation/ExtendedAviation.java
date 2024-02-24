@@ -51,7 +51,7 @@ public class ExtendedAviation {
 		
 		@SubscribeEvent
 		public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-			event.registerEntityRenderer(EntityInit.TEST.get(), TestPlaneEntityRenderer::new);
+			event.registerEntityRenderer(EntityInit.TEST_PLANE.get(), TestPlaneEntityRenderer::new);
 			event.registerEntityRenderer(EntityInit.TEST_HELI.get(), TestHelicopterEntityRenderer::new);
 			event.registerEntityRenderer(EntityInit.RELIANT_ROBIN.get(), ReliantRobinEntityRenderer::new);
 		}

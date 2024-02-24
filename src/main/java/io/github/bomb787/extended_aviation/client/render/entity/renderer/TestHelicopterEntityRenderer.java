@@ -8,9 +8,10 @@ import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Vector3f;
 
 import immersive_aircraft.Main;
+import immersive_aircraft.client.render.entity.MeshRenderer;
 import immersive_aircraft.client.render.entity.renderer.AircraftEntityRenderer;
 import immersive_aircraft.entity.AircraftEntity;
-import immersive_aircraft.util.obj.Mesh;
+import immersive_aircraft.resources.obj.Mesh;
 import io.github.bomb787.extended_aviation.entities.TestHelicopterEntity;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRendererProvider.Context;
@@ -46,8 +47,8 @@ public class TestHelicopterEntityRenderer<T extends TestHelicopterEntity> extend
 									(vertexConsumerProvider, entity, matrixStack, light, tickDelta) -> {
 										ResourceLocation identifier = getTextureLocation(entity);
 										VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderType.entityCutoutNoCull(identifier));
-										Mesh mesh = getFaces(id, "engine_" + (entity.enginePower.getSmooth() > 0.01 ? entity.tickCount % 2 : 0));
-										renderObject(mesh, matrixStack, vertexConsumer, light);
+										Mesh mesh = MeshRenderer.getFaces(id, "engine_" + (entity.enginePower.getSmooth() > 0.01 ? entity.tickCount % 2 : 0));
+										MeshRenderer.renderObject(mesh, matrixStack, vertexConsumer, light);
 									}
 							)
 			);
@@ -66,8 +67,8 @@ public class TestHelicopterEntityRenderer<T extends TestHelicopterEntity> extend
 									(vertexConsumerProvider, entity, matrixStack, light, tickDelta) -> {
 										ResourceLocation identifier = getTextureLocation(entity);
 										VertexConsumer vertexConsumer = vertexConsumerProvider.getBuffer(RenderType.entityCutoutNoCull(identifier));
-										Mesh mesh = getFaces(id, "propeller");
-										renderObject(mesh, matrixStack, vertexConsumer, light);
+										Mesh mesh = MeshRenderer.getFaces(id, "propeller");
+										MeshRenderer.renderObject(mesh, matrixStack, vertexConsumer, light);
 									}
 							)
 			);

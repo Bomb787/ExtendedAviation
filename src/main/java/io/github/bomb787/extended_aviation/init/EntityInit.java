@@ -15,8 +15,8 @@ public class EntityInit {
 	
 	public static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, ExtendedAviation.MOD_ID);
 	
-	public static final RegistryObject<EntityType<TestPlaneEntity>> TEST = ENTITIES.register("test", 
-			() -> EntityType.Builder.of(TestPlaneEntity::new, MobCategory.MISC).sized(3f, 3f).build("test"));
+	public static final RegistryObject<EntityType<TestPlaneEntity>> TEST_PLANE = ENTITIES.register("test_plane", 
+			() -> EntityType.Builder.of(TestPlaneEntity::new, MobCategory.MISC).sized(3f, 3f).build("test_plane"));
 	
 	public static final RegistryObject<EntityType<TestHelicopterEntity>> TEST_HELI = ENTITIES.register("test_heli", 
 			() -> EntityType.Builder.of(TestHelicopterEntity::new, MobCategory.MISC).sized(3f, 3f).build("test_heli"));
@@ -24,7 +24,7 @@ public class EntityInit {
 	public static final RegistryObject<EntityType<ReliantRobinEntity>> RELIANT_ROBIN = ENTITIES.register("reliant_robin", 
 			() -> EntityType.Builder.of(ReliantRobinEntity::new, MobCategory.MISC).sized(3f, 3f).build("reliant_robin"));
 	
-	public static final RegistryObject<EntityType<C172Entity>> C172 = ENTITIES.register("c172", 
-			() -> EntityType.Builder.of(C172Entity::new, MobCategory.MISC).sized(3f, 3f).build("c172"));
+	/*public static final RegistryObject<EntityType<C172Entity>> C172 = ENTITIES.register("c172", 
+			() -> EntityType.Builder.of(C172Entity::new, MobCategory.MISC).sized(3f, 3f).build("c172"));*/
 
 }

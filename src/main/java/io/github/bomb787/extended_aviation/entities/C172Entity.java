@@ -8,7 +8,7 @@ import net.minecraft.world.level.Level;
 
 public class C172Entity extends CustomAirplaneEntity {
 	
-	protected final AircraftProperties properties = new AircraftProperties(this)
+	/*protected final AircraftProperties properties = new AircraftProperties(this)
 			.setYawSpeed(5.0f)
 			.setPitchSpeed(4.0f)
 			.setEngineSpeed(0.05f)
@@ -28,12 +28,12 @@ public class C172Entity extends CustomAirplaneEntity {
 			.addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 6, 8 + 6 + 22)
 			.addSlot(VehicleInventoryDescription.SlotType.UPGRADE, 8 + 18 * 2 + 28, 8 + 6 + 22)
 			.addSlots(VehicleInventoryDescription.SlotType.INVENTORY, 8 + 18 * 5, 8, 3, 3)
-			.build();
+			.build();*/
 	
 	public C172Entity(EntityType<? extends AircraftEntity> entityType, Level world) {
 		super(entityType, world);
 	}
-	
+	/*
 	@Override
 	public VehicleInventoryDescription getInventoryDescription() {
 		return inventoryDescription;
@@ -42,6 +42,6 @@ public class C172Entity extends CustomAirplaneEntity {
 	@Override
 	public AircraftProperties getProperties() {
 		return properties;
-	}
+	}*/
 
 }

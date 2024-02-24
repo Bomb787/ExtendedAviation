@@ -2,6 +2,7 @@ package io.github.bomb787.extended_aviation.entities;
 
 import immersive_aircraft.entity.AircraftEntity;
 import immersive_aircraft.entity.EngineAircraft;
+import immersive_aircraft.item.upgrade.AircraftStat;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -15,11 +16,6 @@ public abstract class CustomAirplaneEntity extends EngineAircraft {
 	@Override
 	protected boolean useAirplaneControls() {
 		return true;
-	}
-	
-	@Override
-	protected float getGroundVelocityDecay() {
-		return falloffGroundVelocityDecay(0.9f);
 	}
 	
 	@Override
@@ -53,7 +49,10 @@ public abstract class CustomAirplaneEntity extends EngineAircraft {
 		Vec3 direction = getForwardDirection();
 		
 		// speed
-		float thrust = (float) (Math.pow(getEnginePower(), 2.0) * this.getProperties().getEngineSpeed());
+		float thrust = (float) (Math.pow(getEnginePower(), 2.0) * getProperties().get(AircraftStat.ENGINE_SPEED));
+        if (onGround && getEngineTarget() < 1.0) {
+            thrust = getProperties().get(AircraftStat.PUSH_SPEED) / (1.0f + (float) getDeltaMovement().length() * 5.0f) * pressingInterpolatedZ.getSmooth() * (1.0f - getEnginePower());
+        }
 		
 		// accelerate
 		setDeltaMovement(getDeltaMovement().add(direction.scale(thrust)));

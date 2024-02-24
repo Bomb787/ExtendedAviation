@@ -105,7 +105,7 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.19.2-43.3.0'
 	
-	runtimeOnly fg.deobf("maven.modrinth:immersive-aircraft:5LJqHC62")
+	runtimeOnly fg.deobf("maven.modrinth:immersive-aircraft:kXLba8iJ")
     runtimeOnly fg.deobf("maven.modrinth:no-telemetry:1.8.0")
     runtimeOnly fg.deobf("maven.modrinth:jei:6ImKQVtc")
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'

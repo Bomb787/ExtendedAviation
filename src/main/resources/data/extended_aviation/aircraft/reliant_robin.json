@@ -1,6 +1,6 @@
 {
 	"properties": {
-		"yawSpeed": 3.5,
+		"yawSpeed": 0.1,
 		"pitchSpeed": 1.5,
 		"engineSpeed": 0.075,
 		"verticalSpeed": 0.0325,
@@ -22,6 +22,7 @@
 		{"type": "upgrade", "x": 72, "y": 36},
 		{"type": "inventory", "x": 98, "y": 8, "cols": 4, "rows": 3}
 	],
+	"weaponMounts": [],
 	"passengerPositions": [
 		[
 			{"x": -0.6, "y": 0.5, "z": -0.75}
@@ -31,5 +32,6 @@
 			{"x": -0.6, "y": 0.5, "z": -2},
 			{"x": 0.6, "y": 0.5, "z": -2}
 		]
-	]
+	],
+	"boundingBoxes": []
 }

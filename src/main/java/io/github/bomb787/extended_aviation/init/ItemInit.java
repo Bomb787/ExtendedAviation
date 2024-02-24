@@ -16,7 +16,7 @@ public class ItemInit {
 	
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExtendedAviation.MOD_ID);
 	
-	public static final RegistryObject<AircraftItem> TEST = ITEMS.register("test", 
+	public static final RegistryObject<AircraftItem> TEST = ITEMS.register("test_plane", 
 			() -> new AircraftItem(new Item.Properties().stacksTo(1).tab(ItemGroups.GROUP), world -> new TestPlaneEntity(EntityInit.TEST_PLANE.get(), world)));
 	
 	public static final RegistryObject<AircraftItem> TEST_HELI = ITEMS.register("test_heli", 

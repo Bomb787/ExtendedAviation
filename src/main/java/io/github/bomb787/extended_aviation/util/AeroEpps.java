@@ -16,7 +16,7 @@ public class AeroEpps {
 		float pitch = entity.getXRot();
 		return 1;
 	}
-	
+	/*
 	public static float lift(CustomAirplaneEntity entity) {
 		
 		
@@ -25,6 +25,6 @@ public class AeroEpps {
 	private static float liftCoefficient(float lift, float aoa) {
 		//Thin airfoil theory
 		
-	}
+	}*/
 
 }

@@ -21,11 +21,6 @@ public class TestPlaneEntity extends CustomAirplaneEntity {
 	public TestPlaneEntity(EntityType<? extends AircraftEntity> entityType, Level world) {
 		super(entityType, world);
 	}
-	
-	@Override
-	protected float getBaseFuelConsumption() {
-		return 1.25f;
-	}
 
 	private final List<Trail> trails = List.of(new Trail(40), new Trail(40));
 
@@ -73,5 +68,10 @@ public class TestPlaneEntity extends CustomAirplaneEntity {
 			}
 		}
 	}
-
+	
+	@Override
+	public double getZoom() {
+		return 3.0;
+	}
+	
 }

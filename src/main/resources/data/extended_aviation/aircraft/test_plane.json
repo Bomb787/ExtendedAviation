@@ -1,5 +1,6 @@
 {
 	"properties": {
+		"fuel": 1.25,
 		"yawSpeed": 5.0,
 		"pitchSpeed": 4.0,
 		"engineSpeed": 0.05,

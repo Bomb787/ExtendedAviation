@@ -20,22 +20,12 @@ public class TestHelicopterEntity extends Rotorcraft {
 	}
 	
 	@Override
-	protected float getBaseFuelConsumption() {
-		return 0.5f;
-	}
-	
-	@Override
 	protected float getInputInterpolationSteps() {
 		return 5;
 	}
 	
 	protected SoundEvent getEngineSound() {
 		return Sounds.PROPELLER_TINY.get();
-	}
-
-	@Override
-	protected float getStabilizer() {
-		return 0.1f;
 	}
 
 	@Override
@@ -56,7 +46,7 @@ public class TestHelicopterEntity extends Rotorcraft {
         if (!onGround) {
             setXRot(getXRot() + getProperties().get(AircraftStat.PITCH_SPEED) * pressingInterpolatedZ.getSmooth());
         }
-        setXRot(getXRot() * (1.0f - getStabilizer()));
+        setXRot(getXRot() * (1.0f - getProperties().getAdditive(AircraftStat.STABILIZER)));
 
         // up and down
         setDeltaMovement(getDeltaMovement().add(0.0f, getEnginePower() * getProperties().get(AircraftStat.VERTICAL_SPEED) * pressingInterpolatedY.getSmooth(), 0.0f));

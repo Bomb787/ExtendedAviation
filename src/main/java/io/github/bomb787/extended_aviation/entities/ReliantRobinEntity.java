@@ -20,11 +20,6 @@ public class ReliantRobinEntity extends Rotorcraft {
 	}
 	
 	@Override
-	protected float getBaseFuelConsumption() {
-		return 0.75f;
-	}
-	
-	@Override
     protected float getInputInterpolationSteps() {
         return 5;
     }
@@ -32,11 +27,6 @@ public class ReliantRobinEntity extends Rotorcraft {
 	protected SoundEvent getEngineSound() {
         return Sounds.PROPELLER_TINY.get();
     }
-	
-	@Override
-	protected float getStabilizer() {
-		return 0.1f;
-	}
 	
 	@Override
 	public Item asItem() {
@@ -56,7 +46,7 @@ public class ReliantRobinEntity extends Rotorcraft {
         if (!onGround) {
             setXRot(getXRot() + getProperties().get(AircraftStat.PITCH_SPEED) * pressingInterpolatedZ.getSmooth());
         }
-        setXRot(getXRot() * (1.0f - getStabilizer()));
+        setXRot(getXRot() * (1.0f - getProperties().getAdditive(AircraftStat.STABILIZER)));
 
         // up and down
         setDeltaMovement(getDeltaMovement().add(0.0f, getEnginePower() * getProperties().get(AircraftStat.VERTICAL_SPEED) * pressingInterpolatedY.getSmooth(), 0.0f));

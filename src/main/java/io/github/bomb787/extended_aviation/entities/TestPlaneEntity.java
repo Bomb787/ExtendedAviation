@@ -8,6 +8,7 @@ import com.mojang.math.Vector3f;
 import com.mojang.math.Vector4f;
 
 import immersive_aircraft.entity.AircraftEntity;
+import immersive_aircraft.entity.AirplaneEntity;
 import immersive_aircraft.entity.misc.Trail;
 import io.github.bomb787.extended_aviation.init.ItemInit;
 import net.minecraft.core.particles.ParticleTypes;
@@ -16,10 +17,20 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
-public class TestPlaneEntity extends CustomAirplaneEntity {
+public class TestPlaneEntity extends AirplaneEntity {
 
 	public TestPlaneEntity(EntityType<? extends AircraftEntity> entityType, Level world) {
-		super(entityType, world);
+		super(entityType, world, true);
+	}
+	
+	@Override
+	protected float getBrakeFactor() {
+		if(this.isOnGround()) {
+			System.out.println(this.getDeltaMovement().lengthSqr());
+			return this.getDeltaMovement().length() < 1f ? 0.1f * (float) this.getDeltaMovement().lengthSqr() + 0.9f: 1f;
+		} else {
+			return 1f;
+		}
 	}
 
 	private final List<Trail> trails = List.of(new Trail(40), new Trail(40));

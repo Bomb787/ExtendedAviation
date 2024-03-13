@@ -1,12 +1,11 @@
 package io.github.bomb787.extended_aviation.entities;
 
 import immersive_aircraft.entity.AircraftEntity;
-import immersive_aircraft.entity.misc.AircraftProperties;
-import immersive_aircraft.entity.misc.VehicleInventoryDescription;
+import immersive_aircraft.entity.AirplaneEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.Level;
 
-public class C172Entity extends CustomAirplaneEntity {
+public class C172Entity extends AirplaneEntity {
 	
 	/*protected final AircraftProperties properties = new AircraftProperties(this)
 			.setYawSpeed(5.0f)
@@ -31,7 +30,7 @@ public class C172Entity extends CustomAirplaneEntity {
 			.build();*/
 	
 	public C172Entity(EntityType<? extends AircraftEntity> entityType, Level world) {
-		super(entityType, world);
+		super(entityType, world, true);
 	}
 	/*
 	@Override

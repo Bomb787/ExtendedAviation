@@ -26,7 +26,12 @@ public abstract class CustomAirplaneEntity extends EngineAircraft {
 	}
 	
 	protected float getBrakeFactor() {
-		return 0.95f;
+		if(this.isOnGround()) {
+			System.out.println(this.getDeltaMovement().lengthSqr());
+			return this.getDeltaMovement().length() < 1f ? 0.1f * (float) this.getDeltaMovement().lengthSqr() + 0.9f: 1f;
+		} else {
+			return 1f;
+		}
 	}
 	
 	@Override

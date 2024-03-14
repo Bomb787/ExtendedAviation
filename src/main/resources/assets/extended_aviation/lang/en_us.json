@@ -1,10 +1,19 @@
 {
 	//Descriptions
+	"item.extended_aviation.c172.description": "Tame handling and good performance has made this a popular choice for flight schools all over.",
 	"item.extended_aviation.reliant_robin.description": "You can almost hear \"HAMMOONNNND\" being yelled as you climb in.",
 	
 	//Entities
 	"entity.extended_aviation.reliant_robin": "Reliant Robin",
 	
-	//Items
-	"item.extended_aviation.reliant_robin": "Reliant Robin"
+	//Aircraft Items
+	"item.extended_aviation.c172": "C172SP Skyhawk",
+	"item.extended_aviation.reliant_robin": "Reliant Robin",
+	
+	//Other Items
+	"item.extended_aviation.large_propeller": "Large Propeller",
+	"item.extended_aviation.large_rotor": "Large Rotor",
+	"item.extended_aviation.metal_fuselage": "Metal Fuselage",
+	"item.extended_aviation.small_rotor": "Small Rotor",
+	"item.extended_aviation.wheel": "Wheel"
 }

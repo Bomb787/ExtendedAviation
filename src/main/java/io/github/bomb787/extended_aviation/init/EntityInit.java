@@ -24,7 +24,7 @@ public class EntityInit {
 	public static final RegistryObject<EntityType<ReliantRobinEntity>> RELIANT_ROBIN = ENTITIES.register("reliant_robin", 
 			() -> EntityType.Builder.of(ReliantRobinEntity::new, MobCategory.MISC).sized(2f, 2f).build("reliant_robin"));
 	
-	/*public static final RegistryObject<EntityType<C172Entity>> C172 = ENTITIES.register("c172", 
-			() -> EntityType.Builder.of(C172Entity::new, MobCategory.MISC).sized(3f, 3f).build("c172"));*/
+	public static final RegistryObject<EntityType<C172Entity>> C172 = ENTITIES.register("c172", 
+			() -> EntityType.Builder.of(C172Entity::new, MobCategory.MISC).sized(3f, 3f).build("c172"));
 
 }

@@ -23,6 +23,7 @@ public class TrikeUltralightRenderer extends AircraftEntityRenderer<TrikeUltrali
 
     public TrikeUltralightRenderer(EntityRendererProvider.Context context) {
         super(context);
+        this.shadowRadius = 0.5f;
     }
 
     @Override

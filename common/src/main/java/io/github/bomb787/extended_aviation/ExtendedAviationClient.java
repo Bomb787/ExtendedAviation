@@ -29,6 +29,6 @@ public class ExtendedAviationClient {
     static {
         ItemColors.ITEM_COLORS.put(ItemInit.SCARLET_BIPLANE_ITEM.get(), getDyeColor(0xEF2323));
         ItemColors.ITEM_COLORS.put(ItemInit.ECONOMY_PLANE_ITEM.get(), getDyeColor(0xFFFFFF));
-        ItemColors.ITEM_COLORS.put(ItemInit.TRIKE_ULTRALIGHT.get(), getDyeColor(0x0000FF));
+        ItemColors.ITEM_COLORS.put(ItemInit.TRIKE_ULTRALIGHT.get(), getDyeColor(0x0018A5));
     }
 }

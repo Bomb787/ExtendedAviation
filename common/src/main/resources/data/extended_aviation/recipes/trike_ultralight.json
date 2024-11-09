@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "PHS",
-    "GEH",
-    "PHS"
+    "SSS",
+    "IEI",
+    " H "
   ],
   "key": {
     "H": [
@@ -11,24 +11,19 @@
         "item": "immersive_aircraft:hull"
       }
     ],
-    "G": [
-      {
-        "item": "immersive_aircraft:industrial_gears"
-      }
-    ],
     "E": [
       {
         "item": "immersive_aircraft:engine"
       }
     ],
-    "P": [
-      {
-        "item": "immersive_aircraft:propeller"
-      }
-    ],
     "S": [
       {
         "item": "immersive_aircraft:sail"
+      }
+    ],
+    "I": [
+      {
+        "item": "iron_ingot"
       }
     ]
   },

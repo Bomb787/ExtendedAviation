@@ -20,6 +20,7 @@ public class HotAirBalloonEntityRenderer extends AircraftEntityRenderer<HotAirBa
 
     public HotAirBalloonEntityRenderer(EntityRendererProvider.Context context) {
         super(context);
+        this.shadowRadius = 0.5f;
     }
 
     @Override

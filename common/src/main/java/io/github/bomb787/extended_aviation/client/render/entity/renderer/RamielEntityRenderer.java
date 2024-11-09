@@ -26,6 +26,7 @@ public class RamielEntityRenderer<T extends RamielEntity> extends AircraftEntity
 
     public RamielEntityRenderer(EntityRendererProvider.Context context) {
         super(context);
+        this.shadowRadius = 0.25f;
     }
 
     @Override

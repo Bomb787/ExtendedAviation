@@ -60,19 +60,19 @@ public class EntityInit {
 
         HOT_AIR_BALLOON = register("hot_air_balloon", EntityType.Builder
                 .of(HotAirBalloonEntity::new, MobCategory.MISC)
-                .sized(1.5f, 2.25f)
+                .sized(1.5f, 2.0f)
                 .clientTrackingRange(12)
         );
 
         VILLAGERCOPTER = register("villagercopter", EntityType.Builder
                 .of(VillagercopterEntity::new, MobCategory.MISC)
-                .sized(3f, 3f)
+                .sized(3f, 3.5f)
                 .clientTrackingRange(12)
         );
 
         TRIKE_ULTRALIGHT = register("trike_ultralight", EntityType.Builder
                 .of(TrikeUltralightEntity::new, MobCategory.MISC)
-                .sized(3f, 3f)
+                .sized(2.5f, 3f)
                 .clientTrackingRange(12)
         );
     }

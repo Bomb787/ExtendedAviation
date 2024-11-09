@@ -35,5 +35,7 @@
 			{"x": 0.6, "y": 0.5, "z": -2}
 		]
 	],
-	"boundingBoxes": []
+	"boundingBoxes": [
+		{"width": 2.5, "height": 2.0, "x": 0.0, "y": 1.0, "z": -2.0}
+	]
 }

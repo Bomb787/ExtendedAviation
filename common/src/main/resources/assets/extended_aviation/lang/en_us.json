@@ -28,6 +28,10 @@
   "item.extended_aviation.villagercopter": "Villagercopter",
   "item.extended_aviation.trike_ultralight": "Trike Ultralight",
 
-  "item.extended_aviation.red_ball_thing": "Core"
+  "item.extended_aviation.red_ball_thing": "Core",
+
+  "key.immersive_aircraft.multi_control_flaps": "Toggle Flaps",
+  "key.immersive_aircraft.multi_control_gear": "Toggle Gear",
+  "key.immersive_aircraft.multi_control_speedbrakes": "Toggle Speedbrakes"
 
 }

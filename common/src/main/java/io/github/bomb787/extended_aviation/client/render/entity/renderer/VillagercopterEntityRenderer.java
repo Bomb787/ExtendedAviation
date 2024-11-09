@@ -20,6 +20,7 @@ public class VillagercopterEntityRenderer extends AircraftEntityRenderer<Village
 
     public VillagercopterEntityRenderer(EntityRendererProvider.Context context) {
         super(context);
+        this.shadowRadius = 1.25f;
     }
 
     @Override

@@ -20,6 +20,7 @@ public class ReliantRobinEntityRenderer extends AircraftEntityRenderer<ReliantRo
 
     public ReliantRobinEntityRenderer(EntityRendererProvider.Context context) {
         super(context);
+        this.shadowRadius = 1.0f;
     }
 
     @Override

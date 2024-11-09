@@ -1,0 +1,33 @@
+{
+  "item.extended_aviation.scarlet_biplane": "Scarlet Biplane",
+  "item.extended_aviation.scarlet_biplane.description": "A vibrant, red biplane, allowing you to navigate the skies of Minecraft with ease and agility.",
+  "entity.extended_aviation.scarlet_biplane": "Scarlet Biplane",
+
+  "item.extended_aviation.economy_plane": "Economy Plane",
+  "item.extended_aviation.economy_plane.description": "Build from cheap and lightweight materials, this aircraft is optimized for low fuel consumption at the expense of comfort.",
+  "entity.extended_aviation.economy_plane": "Economy Plane",
+
+  "item.extended_aviation.c172.description": "Tame handling and good performance has made this a popular choice for flight schools all over.",
+  "item.extended_aviation.reliant_robin.description": "You can almost hear \"HAMMOONNNND\" being yelled as you climb in.",
+  "item.extended_aviation.ramiel.description": "*angelic chorus*",
+  "item.extended_aviation.hot_air_balloon.description": "\"Welcome to FSX: Steam Edition.\"",
+  "item.extended_aviation.villagercopter.description": "\"Duh duh duh duh, duh duh duh duh duh duh duh, Villager News.\"",
+  "item.extended_aviation.trike_ultralight.description": "It would be fun to fly this around a place called \"Friday Harbor\"",
+
+  "entity.extended_aviation.c172": "C172SP",
+  "entity.extended_aviation.reliant_robin": "Reliant Robin",
+  "entity.extended_aviation.ramiel": "Best Girl",
+  "entity.extended_aviation.hot_air_balloon": "Hot Air Balloon",
+  "entity.extended_aviation.villagercopter": "Villagercopter",
+  "entity.extended_aviation.trike_ultralight": "Trike Ultralight",
+
+  "item.extended_aviation.c172": "C172SP Skyhawk",
+  "item.extended_aviation.reliant_robin": "Reliant Robin",
+  "item.extended_aviation.ramiel": "Ramiel",
+  "item.extended_aviation.hot_air_balloon": "Hot Air Balloon",
+  "item.extended_aviation.villagercopter": "Villagercopter",
+  "item.extended_aviation.trike_ultralight": "Trike Ultralight",
+
+  "item.extended_aviation.red_ball_thing": "Core"
+
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "extended_aviation:item/scarlet_biplane_color",
+    "layer1": "extended_aviation:item/scarlet_biplane"
+  }
+}

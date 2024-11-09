@@ -1,0 +1,18 @@
+{
+  "angelic_chorus": {
+    "sounds": [
+      {
+        "name": "extended_aviation:angelic_chorus",
+        "attenuation_distance": 24
+      }
+    ]
+  },
+  "laser": {
+    "sounds": [
+      {
+        "name": "extended_aviation:laser",
+        "attenuation_distance": 24
+      }
+    ]
+  }
+}

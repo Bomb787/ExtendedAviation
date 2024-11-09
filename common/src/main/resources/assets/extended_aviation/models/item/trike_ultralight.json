@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "extended_aviation:item/trike_ultralight_color",
+    "layer1": "extended_aviation:item/trike_ultralight"
+  }
+}

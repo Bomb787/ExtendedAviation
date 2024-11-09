@@ -1,0 +1,27 @@
+{
+	"properties": {
+		"durability": 6.0,
+		"stabilizer": 0.5,
+		"yawSpeed": 0.05,
+		"pitchSpeed": 1.0,
+		"engineSpeed": 0.05,
+		"verticalSpeed": 0.04,
+		"glideFactor": 0.0,
+		"driftDrag": 0.01,
+		"lift": 0.1,
+		"rollFactor": 5.0,
+		"wind": 0.0,
+		"mass": 4.0,
+		"groundFriction": 0.5,
+		"horizontalDecay": 0.9,
+		"verticalDecay": 0.8
+	},
+	"inventorySlots": [],
+	"weaponMounts": [],
+	"passengerPositions": [
+		[
+			{"x": 0.0, "y": 2.0 , "z": -0.25}
+		]
+	],
+	"boundingBoxes": []
+}

@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ALA",
+    "LCL",
+    "ALA"
+  ],
+  "key": {
+    "A": [
+      {
+        "item": "amethyst_shard"
+      }
+    ],
+    "L": [
+      {
+        "item": "lapis_block"
+      }
+    ],
+    "C": [
+      {
+        "item": "extended_aviation:red_ball_thing"
+      }
+    ]
+  },
+  "result": {
+    "item": "extended_aviation:ramiel"
+  }
+}

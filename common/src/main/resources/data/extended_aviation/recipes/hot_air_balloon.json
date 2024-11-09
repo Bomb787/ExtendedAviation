@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "RFR",
+    "YHY"
+  ],
+  "key": {
+    "B": [
+      {
+        "item": "blue_wool"
+      }
+    ],
+    "R": [
+      {
+        "item": "red_wool"
+      }
+    ],
+    "F": [
+      {
+        "item": "furnace"
+      }
+    ],
+    "Y": [
+      {
+        "item": "yellow_wool"
+      }
+    ],
+    "H": [
+      {
+        "item": "hay_block"
+      }
+    ]
+  },
+  "result": {
+    "item": "extended_aviation:hot_air_balloon"
+  }
+}

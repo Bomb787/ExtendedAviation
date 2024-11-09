@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " R ",
+    "RNR",
+    " R "
+  ],
+  "key": {
+    "R": [
+      {
+        "item": "redstone_block"
+      }
+    ],
+    "N": [
+      {
+        "item": "nether_star"
+      }
+    ]
+  },
+  "result": {
+    "item": "extended_aviation:red_ball_thing"
+  }
+}

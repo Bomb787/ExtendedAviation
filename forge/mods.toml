@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[@LOADER_MAJOR@,)"
+issueTrackerURL = "https://github.com/Luke100000/Man-of-Many-Planes/issues"
+license = "GPL-3.0-or-later"
+
+[[mods]]
+modId = "extended_aviation"
+version = "${version}"
+displayName = "Extended Aviation"
+displayURL = "https://www.curseforge.com/minecraft/mc-mods/man-of-many-planes"
+authors = "Bomb787"
+description = "An addon mod for Immersive Aircraft for a (much) larger variety of aircraft."
+logoFile = "icon.png"
+itemIcon = "extended_aviation:economy_plane"
+
+[[dependencies.extended_aviation]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[@MINECRAFT_VERSION@,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.extended_aviation]]
+modId = "forge"
+mandatory = true
+versionRange = "[@LOADER_MAJOR@,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.extended_aviation]]
+modId = "immersive_aircraft"
+mandatory = true
+versionRange = "[1.1.0,)"
+ordering = "NONE"
+side = "BOTH"

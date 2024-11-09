@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "extended_aviation",
+  "version": "${version}",
+
+  "name": "Extended Aviation",
+  "description": "An addon mod for Immersive Aircraft for a (much) larger variety of aircraft.",
+  "authors": ["Bomb787"],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/man-of-many-planes",
+    "sources": "https://github.com/Luke100000/Man-of-Many-Planes",
+    "issues": "https://github.com/Luke100000/Man-of-Many-Planes/issues"
+  },
+
+  "license": "GPL-3.0-or-later",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.bomb787.extended_aviation.fabric.ExtendedAviationFabric"
+    ],
+    "client": [
+      "io.github.bomb787.extended_aviation.fabric.ExtendedAviationFabricClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "minecraft": ">=1.20.1",
+    "immersive_aircraft": ">=1.1.0"
+  }
+}

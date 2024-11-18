@@ -9,7 +9,6 @@ public class ExtendedAviation {
     public static void init() {
         ItemInit.init();
         EntityInit.init();
-        SoundInit.init();
         PacketInit.init();
         StatInit.init();
     }

@@ -23,5 +23,4 @@ public class SoundInit {
         return Registration.register(BuiltInRegistries.SOUND_EVENT, id, () -> SoundEvent.createVariableRangeEvent(id));
     }
 
-
 }

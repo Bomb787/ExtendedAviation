@@ -24,6 +24,9 @@
       "io.github.bomb787.extended_aviation.fabric.ExtendedAviationFabricClient"
     ]
   },
+  "mixins": [
+    "extended_aviation.mixins.json"
+  ],
   "depends": {
     "fabricloader": ">=0.16.5",
     "minecraft": ">=1.20.1",
